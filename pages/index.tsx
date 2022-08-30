@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-screen bg-darker-navy">
+      <main className="h-screen bg-white-one dark:bg-darker-navy">
         <Navbar />
       </main>
     </div>
