@@ -11,7 +11,7 @@ const Navbar: FC = () => {
   };
 
   return (
-    <nav className="box-border flex items-center justify-between w-full p-6">
+    <nav className="box-border flex items-center justify-between w-full">
       <h1 className="m-0 text-2xl font-bold text-dark-grey font-SpaceMono dark:text-white">
         devfinder
       </h1>
