@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-start h-screen bg-white-one dark:bg-darker-navy lg:justify-center">
+      <main className="flex flex-col items-center justify-start h-screen duration-300 bg-white-one dark:bg-darker-navy lg:justify-center">
         <div className="flex flex-col w-full gap-2 p-6 lg:max-w-[730px]">
           <Navbar />
           <SearchBar />
