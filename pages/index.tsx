@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import SearchBar from '../components/SearchBar';
+import Navbar from '../components/NavBar/Navbar';
+import SearchBar from '../components/SearchBar/SearchBar';
+import UserInfo from '../components/UserInfo/UserInfo';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col w-full gap-2 p-6 lg:max-w-[730px]">
           <Navbar />
           <SearchBar />
+          <UserInfo />
         </div>
       </main>
     </div>
