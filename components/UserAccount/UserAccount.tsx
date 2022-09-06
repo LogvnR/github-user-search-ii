@@ -7,7 +7,7 @@ import Image from 'next/image';
 const UserAccount: FC = () => {
   const { user } = userStore();
 
-  const { data, loading } = useGetUserQuery({
+  const { data } = useGetUserQuery({
     variables: {
       login: user,
     },

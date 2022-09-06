@@ -8,7 +8,7 @@ import { BsLink45Deg, BsTwitter, BsBuilding } from 'react-icons/bs';
 const UserLinks: FC = () => {
   const { user } = userStore();
 
-  const { data, loading } = useGetUserQuery({
+  const { data } = useGetUserQuery({
     variables: {
       login: user,
     },

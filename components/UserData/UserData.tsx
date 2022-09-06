@@ -5,7 +5,7 @@ import userStore from '../../helpers/userStore';
 const UserData: FC = () => {
   const { user } = userStore();
 
-  const { data, loading } = useGetUserQuery({
+  const { data } = useGetUserQuery({
     variables: {
       login: user,
     },

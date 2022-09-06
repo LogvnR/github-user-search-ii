@@ -1,14 +1,25 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
 
 const Navbar: FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [theme, setTheme] = useState<string>('light');
 
   const themeToggleHandler = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.theme = newTheme;
     const mainHTML = document.querySelector('html');
     mainHTML?.classList.toggle('dark');
-    setIsDarkMode(!isDarkMode);
   };
+
+  useEffect(() => {
+    if (localStorage.theme === 'dark') {
+      setTheme('dark');
+      document?.querySelector('html')?.classList.add('dark');
+    } else {
+      document?.querySelector('html')?.classList.remove('dark');
+    }
+  }, [setTheme]);
 
   return (
     <nav className="box-border flex items-center justify-between w-full">
@@ -20,9 +31,9 @@ const Navbar: FC = () => {
         onClick={themeToggleHandler}
       >
         <p className="text-sm font-bold tracking-widest uppercase font-SpaceMono">
-          {!isDarkMode ? 'dark' : 'light'}
+          {theme === 'light' ? 'dark' : 'light'}
         </p>
-        {!isDarkMode ? <BsMoonFill size={20} /> : <BsSunFill size={20} />}
+        {theme === 'light' ? <BsMoonFill size={20} /> : <BsSunFill size={20} />}
       </div>
     </nav>
   );

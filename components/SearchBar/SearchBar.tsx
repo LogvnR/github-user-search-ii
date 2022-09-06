@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { RiSearch2Line } from 'react-icons/ri';
 import userStore from '../../helpers/userStore';
 import { useGetUserQuery } from '../../graphql/generated/graphql';
-import { ApolloError } from '@apollo/client';
 
 const SearchBar = () => {
   const [searchedUser, setSearchedUser] = useState<string>('');
