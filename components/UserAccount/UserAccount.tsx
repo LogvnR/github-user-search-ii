@@ -1,6 +1,18 @@
-import React from 'react';
+import { FC } from 'react';
+import { useGetUserQuery } from '../../graphql/generated/graphql';
+import userStore from '../../helpers/userStore';
 
-const UserAccount = () => {
+const UserAccount: FC = () => {
+  const { user } = userStore();
+
+  const { data, loading } = useGetUserQuery({
+    variables: {
+      login: user,
+    },
+  });
+
+  console.log(data?.user?.name);
+
   return (
     <div className="flex flex-col w-full gap-4">
       <div className="flex w-full gap-4">

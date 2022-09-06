@@ -1,0 +1,4 @@
+APOLLO_KEY=service:gitHubUserSeachII-9fxt2p:BICyeNwZFdNqX-03JOzNSg \
+  rover subgraph publish gitHubUserSeachII-9fxt2p@current \
+  --name products --schema ./products-schema.graphql \
+  --routing-url http://products.prod.svc.cluster.local:4001/graphql
