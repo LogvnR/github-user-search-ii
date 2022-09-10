@@ -17,7 +17,7 @@ const UserInfo: FC = () => {
   });
 
   return (
-    <section className="flex flex-col justify-center w-full min-h-[445px] gap-5 p-4 mt-4 bg-white shadow-md dark:bg-dark-navy rounded-2xl">
+    <section className="flex flex-col justify-center w-full min-h-[445px] md:min-h-[481px] gap-5 p-4 md:p-8 mt-4 bg-white shadow-md dark:bg-dark-navy rounded-2xl">
       {!loading && (
         <>
           <UserAccount />

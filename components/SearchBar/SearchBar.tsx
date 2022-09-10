@@ -31,14 +31,14 @@ const SearchBar = () => {
   }, [error]);
 
   return (
-    <div className="flex w-full mt-4 bg-white text-git-blue min-h-[60px] justify-between items-center px-4 rounded-xl gap-2 shadow-md dark:bg-dark-navy">
+    <div className="flex w-full mt-4 bg-white text-git-blue min-h-[60px] justify-between items-center px-4 rounded-xl gap-2 md:gap-4 shadow-md dark:bg-dark-navy">
       <RiSearch2Line size={20} />
       <div className="flex items-center justify-between w-full gap-2">
         <input
           type="text"
           className={`${
             userError ? 'w-1/3' : 'w-full'
-          } h-[25px] bg-transparent font-SpaceMono text-xs outline-none text-dark-grey caret-git-blue dark:text-white`}
+          } h-[25px] bg-transparent font-SpaceMono text-xs md:text-base outline-none text-dark-grey caret-git-blue dark:text-white`}
           placeholder="Search Github username..."
           onChange={(event) => {
             setSearchedUser(event.target.value);
