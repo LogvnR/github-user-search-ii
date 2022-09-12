@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Github User Search II
 
-## Getting Started
+## Table of contents
 
-First, run the development server:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### The challenge
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Users should be able to:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Search for GitHub users by their **username**
+- See relevant user information based on their search
+- Switch between light and dark themes
+- Click on links to respective endpoints
+  - User Icon links to users GitHub page.
+  - User website link will take you to users website, if there is one.
+  - User twitter link will take you to users twitter, if there is one.
+- Color scheme changes based on User preference.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Links
 
-## Learn More
+- Live Site URL: [Git Search Lite II](https://github-user-search-ii.netlify.app/)
 
-To learn more about Next.js, take a look at the following resources:
+**Version 1** of this App:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Live Site [Git Search Lite](https://github-user-search-lite.netlify.app/)
+- Github Repo [Git Search Lite](https://github.com/LogvnR/github-user-search)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## My process
 
-## Deploy on Vercel
+### Built with
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Next.js](https://nextjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/) - Js Type Library
+- [GraphQL](https://graphql.org/) - Query Language
+- [TailwindCSS](https://tailwindcss.com/) - CSS Library
+- [React-Hook-Form](https://react-hook-form.com/) - Form Library
+- [Zustand](https://zustand-demo.pmnd.rs/) - State Management Library
+- Flexbox
+- Theme Switching
+- Mobile-first workflow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+
+- Website - [Logan Ricard](https://www.logvnjs.dev)
+- LinkedIn - [@LogvnR](https://www.linkedin.com/in/logvnr/)
