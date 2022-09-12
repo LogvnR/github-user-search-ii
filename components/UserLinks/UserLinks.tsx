@@ -24,64 +24,79 @@ const UserLinks: FC = () => {
       {loading && <Spinner />}
       {!loading && (
         <>
-          {data?.user?.location ? (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy dark:text-white">
-              <MdLocationPin size={22} />
-              <p className="text-xs md:text-base">{data?.user?.location}</p>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy/50 dark:text-white/50">
-              <MdLocationPin size={22} />
-              <p className="text-xs md:text-base">Not Available</p>
-            </div>
-          )}
-          {data?.user?.websiteUrl ? (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy dark:text-white">
-              <BsLink45Deg size={22} />
-              <a
-                href={`https://${data?.user?.websiteUrl}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className="text-xs md:text-base">{data?.user?.websiteUrl}</p>
-              </a>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy/50 dark:text-white/50">
-              <BsLink45Deg size={22} />
-              <p className="text-xs md:text-base">Not Available</p>
-            </div>
-          )}
-          {data?.user?.twitterUsername ? (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy dark:text-white">
-              <BsTwitter size={22} />
-              <a
-                href={`https://twitter.com/${data?.user?.twitterUsername}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p className="text-xs md:text-base">
-                  {data?.user?.twitterUsername}
-                </p>
-              </a>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy/50 dark:text-white/50">
-              <BsTwitter size={22} />
-              <p className="text-xs md:text-base">Not Available</p>
-            </div>
-          )}
-          {data?.user?.company ? (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy dark:text-white">
-              <BsBuilding size={22} />
-              <p className="text-xs md:text-base">{data?.user?.company}</p>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy/50 dark:text-white/50">
-              <BsBuilding size={22} />
-              <p className="text-xs md:text-base">Not Available</p>
-            </div>
-          )}
+          <div
+            className={`flex items-center gap-3 md:w-[300px] font-SpaceMono ${
+              data?.user?.location
+                ? 'text-light-navy dark:text-white'
+                : 'text-light-navy/50 dark:text-white/50'
+            }`}
+          >
+            <MdLocationPin size={22} />
+            <p className="text-xs md:text-base">
+              {data?.user?.location ? data?.user?.location : 'Not Available'}
+            </p>
+          </div>
+
+          <div
+            className={`flex items-center gap-3 md:w-[300px] font-SpaceMono ${
+              data?.user?.websiteUrl
+                ? 'text-light-navy dark:text-white'
+                : 'text-light-navy/50 dark:text-white/50'
+            }`}
+          >
+            <BsLink45Deg size={22} />
+            <a
+              href={`https://${data?.user?.websiteUrl}`}
+              target="_blank"
+              rel="noreferrer"
+              className={`${
+                data?.user?.websiteUrl ? '' : 'pointer-events-none'
+              }`}
+            >
+              <p className="text-xs md:text-base">
+                {data?.user?.websiteUrl
+                  ? data?.user?.websiteUrl
+                  : 'Not Available'}
+              </p>
+            </a>
+          </div>
+
+          <div
+            className={`flex items-center gap-3 md:w-[300px] font-SpaceMono  ${
+              data?.user?.twitterUsername
+                ? 'text-light-navy dark:text-white'
+                : 'text-light-navy/50 dark:text-white/50'
+            }`}
+          >
+            <BsTwitter size={22} />
+            <a
+              href={`https://twitter.com/${data?.user?.twitterUsername}`}
+              target="_blank"
+              rel="noreferrer"
+              className={`${
+                data?.user?.twitterUsername ? '' : 'pointer-events-none'
+              }`}
+            >
+              <p className="text-xs md:text-base">
+                {data?.user?.twitterUsername
+                  ? data?.user?.twitterUsername
+                  : 'Not Available'}
+              </p>
+            </a>
+          </div>
+
+          <div
+            className={`flex items-center gap-3 md:w-[300px] font-SpaceMono ${
+              data?.user?.company
+                ? 'text-light-navy dark:text-white'
+                : 'text-light-navy/50 dark:text-white/50'
+            }`}
+          >
+            <BsBuilding size={22} />
+            <p className="text-xs md:text-base">
+              {data?.user?.company ? data?.user?.company : 'Not Available'}
+            </p>
+          </div>
         </>
       )}
     </div>

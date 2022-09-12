@@ -14,8 +14,6 @@ const UserAccount: FC = () => {
     },
   });
 
-  console.log(data?.user);
-
   return (
     <div className="flex flex-col w-full gap-8">
       {loading && <Spinner />}
