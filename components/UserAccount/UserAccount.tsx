@@ -24,12 +24,13 @@ const UserAccount: FC = () => {
           <div className="flex w-full gap-4 md:gap-8">
             <div className="w-[70px] h-[70px] md:w-[117px] md:h-[117px] relative">
               {data?.user?.avatarUrl && (
-                <a href={data?.user?.url} className="" target="_blank">
+                <a href={data?.user?.url} target="_blank" rel="noreferrer">
                   <Image
                     className="rounded-full"
                     layout="fill"
                     objectFit="contain"
                     src={data?.user?.avatarUrl}
+                    alt="User Profile Image"
                   />
                 </a>
               )}

@@ -38,7 +38,11 @@ const UserLinks: FC = () => {
           {data?.user?.websiteUrl ? (
             <div className="flex items-center gap-3 md:w-[300px] font-SpaceMono text-light-navy dark:text-white">
               <BsLink45Deg size={22} />
-              <a href={`https://${data?.user?.websiteUrl}`} target="_blank">
+              <a
+                href={`https://${data?.user?.websiteUrl}`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <p className="text-xs md:text-base">{data?.user?.websiteUrl}</p>
               </a>
             </div>
@@ -54,6 +58,7 @@ const UserLinks: FC = () => {
               <a
                 href={`https://twitter.com/${data?.user?.twitterUsername}`}
                 target="_blank"
+                rel="noreferrer"
               >
                 <p className="text-xs md:text-base">
                   {data?.user?.twitterUsername}

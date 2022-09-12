@@ -8,6 +8,7 @@ const NoResults = () => {
           src="/undraw_void_-3-ggu.svg"
           layout="fill"
           objectFit="contain"
+          alt="No User Found"
         />
       </div>
       <p className="font-semibold text-git-blue font-SpaceMono">
