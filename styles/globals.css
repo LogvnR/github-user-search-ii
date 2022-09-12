@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border: 1px solid rgba(37, 51, 65, 0);
+  -webkit-text-fill-color: #0079ff;
+  -webkit-box-shadow: 0 0 0px 1000px #25334100 inset;
+  box-shadow: 0 0 0px 1000px #25334100 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 html,
 body {
   padding: 0;
